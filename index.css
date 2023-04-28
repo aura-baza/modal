@@ -1,0 +1,126 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background-image: url(img/backGroungImage.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container__inside{
+  background-color: white;
+  width:40% ;
+  height:200px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+
+}
+.container__show{
+ background-color: rgba(3, 6, 9, 0.591);
+ position: fixed;
+ top: 0;
+ width: 100%;
+ height: 100vh;
+ display: flex;
+ opacity: 0;
+ justify-content: center;
+ align-items: center;
+ pointer-events: none;
+ transition: 1s all ease-in-out;
+}
+.container__modal{
+    background-color: white;
+    width:40% ;
+    height:160px;
+    position: relative;
+    font-size: 30px;
+    display:flex;
+    background-color: aqua;
+    justify-content: center;
+    align-items: center;  
+}
+.show__modal{
+    opacity: 1;
+    pointer-events:unset;
+}
+.close{
+    position: absolute;
+    font-size:20px;
+    color:#150606;
+    top: 10px;
+    right: 15px;
+    padding: 5px;
+    cursor: pointer;
+    transition: 1s transform ;
+    
+}
+.close:hover{
+    transform:rotate(1turn);
+}
+.btn__open__modal{
+    background-color:rgb(68, 160, 240);
+    color: white;
+    border-radius: 8px;
+    border: none;
+    width: 30%;
+    height:30px;
+    letter-spacing: 3px;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+.btn__open__modal:hover{
+    background-color: white;
+    color:rgb(68, 160, 240) ;
+    border: 1px solid rgb(68, 160, 240);;
+}
+@media (max-width:1200px){
+    .container__inside{
+        width: 60%;
+        height: 200px;
+    }
+    .container__modal{
+        width: 60%;
+        height: 160px;
+    }
+    .btn__open__modal{
+        width:40%;
+    }
+}
+@media (max-width:760px){
+    .container__inside{
+        width:80%;
+    }
+    .container__modal{
+        width: 80%;
+    }
+}
+@media (max-width:513px){
+    .container__inside{
+        width:90%;
+    }
+    .container__modal{
+        width: 90%;
+    }
+}
+@media (max-width:432px){
+    .container__inside{
+        width:95%;
+    }
+    .container__modal{
+        width: 95%;
+    }
+    .btn__open__modal{
+        width:50%;
+    }
+}
